@@ -1,0 +1,24 @@
+#include<stdio.h>
+int max(int* arr, int len);
+int main()
+{
+	int i, arr[10];
+	printf("输入十个整数\n");
+	for (i = 0; i < 10; ++i)
+		scanf_s("%d", arr + i);
+	printf("最大值为：%d",max(arr,10));
+
+	return 0;
+}
+int max(int* arr, int len)
+{
+	int i, max;
+	max = *arr;
+	for (i = 0; i < 10; ++i)
+	{
+		if (max < *(arr + i))
+			max = *(arr + i);
+
+	}
+	return max;
+}
